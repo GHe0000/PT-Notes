@@ -1,34 +1,8 @@
 ---
-title: "Quarto 示例"
+title: "前言"
 toc: true
 ---
 
-# 欢迎
+# 前言
 
-<!-- 原内容：这是由 Quarto 生成的网页，同时会输出 `index.tex`。 -->
-这是由 Quarto 生成的网页，同时会输出整本书的 `.tex` 文件。
-
-## 目录
-
-本页目录由 Quarto 根据标题自动生成，不需要手写。
-
-## 图片
-
-![示例图片](images/example.png){width=60% fig-align="center"}
-
-## 代码高亮
-
-<!-- 原内容（代码块未闭合，导致渲染为纯文本）：
-```python
-def hello(name):
-    return f"Hello, {name}!"
-
-print(hello("Quarto"))
--->
-
-```python
-def hello(name):
-    return f"Hello, {name}!"
-
-print(hello("Quarto"))
-```
+这是一个 PT 相关方法的介绍网站，记录在笔者一整年打 PT 过程中了解、记录、使用的一些实验方法以及一些经验和建议，供之后有志于参加 PT 比赛的同学参考.

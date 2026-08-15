@@ -1,0 +1,58 @@
+# 常用软件
+
+这里列举出了 PT 比赛中常用的工具，软件，以及一些个人的经验.
+
+## AI 工具
+
+**ChatGPT + Codex**
+
+**Claude**
+
+**Deepseek**
+
+## 计算
+
+**Python**
+
+**Matlab**
+
+**Mathematica**
+
+## 模拟
+
+**Comsol**
+
+**Fluent**
+
+****
+
+## 绘图
+
+**Origin**
+
+**PowerPoint 图形**
+
+## 视频追踪和测量
+
+**Tracker**
+
+**Python + OpenCV**
+
+## 文献收集和整理
+
+**Zotero**
+
+## 自动化控制
+
+**Arduino**
+
+## 3D 建模
+
+**Fusion 360**
+
+## 杂七杂八
+
+**Audition**
+
+**FFmpeg**
+
