@@ -22,8 +22,17 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Quarto
+      # - name: Setup Quarto              # 原配置：未安装 LaTeX，latex 格式渲染会失败
+      #   uses: quarto-dev/quarto-actions/setup@v2
+      - name: Setup Quarto and TinyTeX    # 新配置：同时安装 TinyTeX
         uses: quarto-dev/quarto-actions/setup@v2
+        with:
+          tinytex: true
+
+      - name: Install ctex for Chinese PDF  # 新配置：预装中文排版所需宏包
+        run: |
+          tlmgr install ctex fandol
+        shell: bash
 
       - name: Render Quarto
         run: quarto render

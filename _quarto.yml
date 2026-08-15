@@ -1,5 +1,7 @@
 project:
   type: book
+  # 新增：book 项目默认输出到 _book，改为 _site 与工作流上传路径保持一致
+  output-dir: _site
 
 book:
   title: "我的 Quarto 网页测试"
@@ -10,6 +12,13 @@ book:
 format:
   html:
     theme: cosmo
-  latex:
+  # latex:                 # 原配置：缺少 PDF 引擎，CI 无 LaTeX 环境时会失败
+  #   toc: true
+  #   documentclass: scrreprt
+  latex:                   # 新配置：xelatex + ctex 支持中文编译
     toc: true
     documentclass: scrreprt
+    pdf-engine: xelatex
+    include-in-header:
+      - text: |
+          \usepackage{ctex}

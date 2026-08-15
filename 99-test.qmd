@@ -1,4 +1,5 @@
-
+<!--
+原始内容（未修改前）：
 `01-basics.qmd` 可以放更多内容，然后在 `_quarto.yml` 的 `website.navbar` 里加上链接。
 
 ---
@@ -13,3 +14,25 @@
 6. 网页会发布到：
    ```text
    https://<你的用户名>.github.io/<仓库名>/
+
+存在的问题：缺少 YAML 头、`---` 会被渲染成水平线、内容误用了 website 项目概念、末尾代码块未闭合。
+-->
+
+---
+title: "测试章节"
+---
+
+`01-basics.qmd` 可以放更多内容，然后在 `_quarto.yml` 的 `book.chapters` 里加上链接。
+
+## 5. 使用步骤
+
+1. 创建仓库，把上面的文件放进去。
+2. 打开仓库 **Settings → Pages**。
+3. 在 **Build and deployment** 中，Source 选择 **GitHub Actions**。
+4. 推送代码到 `main` 分支。
+5. 等待 Actions 运行完成。
+6. 网页会发布到：
+
+   ```text
+   https://<你的用户名>.github.io/<仓库名>/
+   ```

@@ -5,7 +5,8 @@ toc: true
 
 # 欢迎
 
-这是由 Quarto 生成的网页，同时会输出 `index.tex`。
+<!-- 原内容：这是由 Quarto 生成的网页，同时会输出 `index.tex`。 -->
+这是由 Quarto 生成的网页，同时会输出整本书的 `.tex` 文件。
 
 ## 目录
 
