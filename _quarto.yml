@@ -12,8 +12,10 @@ book:
 format:
   html:
     # theme: cosmo              # 原配置：仅亮色主题
-    theme: cosmo                # 新配置：亮色 cosmo + 暗色 darkly
-    dark: darkly                # 页面右上角自动出现亮/暗切换按钮
+    # dark: darkly              # 原配置：Quarto 1.5+ 已移除 dark 选项，不生效
+    theme:                      # 新配置：亮/暗双主题，自动生成切换按钮
+      light: cosmo
+      dark: darkly
   # latex:                 # 原配置：缺少 PDF 引擎，CI 无 LaTeX 环境时会失败
   #   toc: true
   #   documentclass: scrreprt

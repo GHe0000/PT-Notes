@@ -18,8 +18,17 @@ toc: true
 
 ## 代码高亮
 
+<!-- 原内容（代码块未闭合，导致渲染为纯文本）：
 ```python
 def hello(name):
     return f"Hello, {name}!"
 
 print(hello("Quarto"))
+-->
+
+```python
+def hello(name):
+    return f"Hello, {name}!"
+
+print(hello("Quarto"))
+```
