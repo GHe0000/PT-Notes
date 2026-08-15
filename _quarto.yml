@@ -11,7 +11,9 @@ book:
 
 format:
   html:
-    theme: cosmo
+    # theme: cosmo              # 原配置：仅亮色主题
+    theme: cosmo                # 新配置：亮色 cosmo + 暗色 darkly
+    dark: darkly                # 页面右上角自动出现亮/暗切换按钮
   # latex:                 # 原配置：缺少 PDF 引擎，CI 无 LaTeX 环境时会失败
   #   toc: true
   #   documentclass: scrreprt
