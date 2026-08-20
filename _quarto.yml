@@ -10,7 +10,7 @@ book:
     - 测量方法.qmd
     - 释放和控制.qmd
     - 拍摄.qmd
-    - 数据后处理.qmd
+    - 数据处理.qmd
     - 杂七杂八.qmd
 
 format:
