@@ -7,7 +7,8 @@ toc: true
 
 这是一个 PT 相关方法的介绍网站，记录在笔者一整年打 PT 过程中了解、记录、使用的一些实验方法以及一些经验和建议，供之后有志于参加 PT 比赛的同学参考. 不过笔者语言能力有限，所以可能有些地方表述不准确或者不清晰，同时比完国赛后比较摆烂，有些原本想提及的可能也懒得提了，所以可能有些内容可能不够完善或者不够全面，欢迎各位同学提出宝贵意见和建议，笔者会尽力改进和更新.
 
+
 另外这是我的个人主页，如果闲得无聊，可以看看我的其他博客和文章，以及一些课堂上敲的讲义和笔记. <https://ghe0000.pp.ua/>
 
 
-网页编写总时长：[![wakatime](https://wakatime.com/badge/user/70908aa3-b2c6-4f44-a07f-7bd45f260e48/project/6486300c-7284-4e4d-8f62-d3d82f9df830.svg)](https://wakatime.com/badge/user/70908aa3-b2c6-4f44-a07f-7bd45f260e48/project/6486300c-7284-4e4d-8f62-d3d82f9df830)
+上次提交时间： [![GitHub last commit](https://img.shields.io/github/last-commit/GHe0000/PT-Notes?style=flat&logo=github&label=github&labelColor=555&color=007ec6)](https://github.com/GHe0000/PT-Notes/commits)，网页编写总时长：[![wakatime](https://wakatime.com/badge/user/70908aa3-b2c6-4f44-a07f-7bd45f260e48/project/6486300c-7284-4e4d-8f62-d3d82f9df830.svg)](https://wakatime.com/badge/user/70908aa3-b2c6-4f44-a07f-7bd45f260e48/project/6486300c-7284-4e4d-8f62-d3d82f9df830)
