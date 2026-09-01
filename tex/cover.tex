@@ -1,0 +1,33 @@
+\newgeometry{margin=0pt}
+\thispagestyle{empty}
+
+\centering
+\IfFileExists{\CoverImage}{%
+  \includegraphics[
+    width=\paperwidth,
+    height=0.55\paperheight,
+    keepaspectratio
+  ]{\CoverImage}%
+}{%
+  \vspace*{0.18\paperheight}%
+}
+
+\vfill
+{\parbox{0.618\textwidth}{%
+  \raggedleft
+  {\bfseries\Huge \BookTitle\par}
+  \vspace{0.6em}
+  \rule{\linewidth}{4pt}
+}}
+
+\vfill
+{\parbox{0.618\textwidth}{%
+  \raggedleft\Large\kaishu
+  \begin{tabular}{r|}
+    作者：\BookAuthor \\
+    编译时间：\today
+  \end{tabular}
+}}
+\vfill
+
+\restoregeometry

@@ -11,7 +11,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: "pages"
+  group: pages
   cancel-in-progress: false
 
 jobs:
@@ -22,34 +22,67 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # - name: Setup Quarto              # 原配置：未安装 LaTeX，latex 格式渲染会失败
-      #   uses: quarto-dev/quarto-actions/setup@v2
-      - name: Setup Quarto and TinyTeX    # 新配置：同时安装 TinyTeX
+      - name: Setup Quarto
         uses: quarto-dev/quarto-actions/setup@v2
-        with:
-          tinytex: true
 
-      # - name: Install ctex for Chinese PDF  # 原配置：quarto-actions/setup 安装的 TinyTeX 不在 PATH 上，直接调用 tlmgr 会失败
-      #   run: |
-      #     tlmgr install ctex fandol
-      #   shell: bash
-      # 说明：quarto render 编译 PDF 时会自动检测并安装缺失的宏包（latex-auto-install 默认开启），
-      # 因此无需手动执行 tlmgr，上面的步骤已注释。
+      # HTML 只输出到 _site，供 GitHub Pages 使用。
+      - name: Render HTML
+        run: quarto render --to html --output-dir _site
 
-      - name: Render Quarto
-        run: quarto render
+      # Quarto Book 的 LaTeX 源码输出到 tex/generated/。
+      # 当前 Quarto 通常会在其中建立 book-latex/ 子目录；
+      # main.tex 同时兼容直接输出到 generated/ 根目录的情况。
+      - name: Render LaTeX body
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf tex/generated
+          quarto render --to latex --output-dir tex/generated
 
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: _site
+          if [[ -f tex/generated/book-latex/PT-Notes.tex ]]; then
+            echo 'LaTeX body: tex/generated/book-latex/PT-Notes.tex'
+          elif [[ -f tex/generated/PT-Notes.tex ]]; then
+            echo 'LaTeX body: tex/generated/PT-Notes.tex'
+          else
+            echo 'PT-Notes.tex was not generated.' >&2
+            find tex/generated -maxdepth 4 -type f | sort >&2 || true
+            exit 1
+          fi
 
-      - name: Upload TeX files
+      # Artifact 中保留顶层 tex/ 目录。
+      - name: Prepare TeX source artifact
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf dist/PT-Notes-tex-source
+          mkdir -p dist/PT-Notes-tex-source
+          cp -a tex dist/PT-Notes-tex-source/
+
+          # 不把预览/编译缓存带入源码包。
+          find dist/PT-Notes-tex-source -type d \
+            \( -name aux -o -name latex-preview-cache \) \
+            -prune -exec rm -rf {} + || true
+          find dist/PT-Notes-tex-source -type f \
+            \( -name '*.aux' -o -name '*.log' -o -name '*.toc' \
+               -o -name '*.out' -o -name '*.fls' -o -name '*.fdb_latexmk' \
+               -o -name '*.synctex.gz' -o -name '*.xdv' -o -name 'main.pdf' \) \
+            -delete
+
+          echo '===== TeX artifact ====='
+          find dist/PT-Notes-tex-source -maxdepth 5 -type f | sort
+
+      - name: Upload TeX source artifact
         uses: actions/upload-artifact@v4
         with:
-          name: tex-files
-          path: _site/**/*.tex
-          if-no-files-found: warn
+          name: PT-Notes-tex-source
+          path: dist/PT-Notes-tex-source
+          retention-days: 30
+          if-no-files-found: error
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: _site
 
   deploy:
     runs-on: ubuntu-latest
@@ -62,4 +95,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5

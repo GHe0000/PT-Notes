@@ -18,10 +18,8 @@ format:
     theme:
       light: cosmo
       dark: darkly
+
   latex:
-    toc: true
-    documentclass: scrreprt
-    pdf-engine: xelatex
-    include-in-header:
-      - text: |
-          \usepackage{ctex}
+    # LaTeX 只生成正文；完整文档由 tex/main.tex 负责。
+    template: tex/quarto-body.tex
+    toc: false

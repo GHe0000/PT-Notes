@@ -1,0 +1,107 @@
+% !TeX root = ../main.tex
+\chapter{环境测试}
+
+\section{正文与数学}
+
+这是一段中文正文，用于检查 XeLaTeX 中文排版、行距、目录与章节标题。
+行内公式示例：$\vec{x}\in\mathbb{R}^n$，以及花体符号 $\ms{F}$。
+
+\begin{align}
+  \mathrm{e}^{\mathrm{i}x} &= \cos x + \mathrm{i}\sin x, \\
+  \int_{-\infty}^{+\infty} \mathrm{e}^{-x^2}\,\mathrm{d}x &= \sqrt{\pi}.
+\end{align}
+
+旧式 Dirac 记号兼容测试：
+\[
+  \bra{\psi},\qquad
+  \ket{\phi},\qquad
+  \braket{\psi|\phi},\qquad
+  \braket{\psi|A|\phi}.
+\]
+
+反双曲函数宏：$\arsinh x$，$\arcosh x$，$\artanh x$；单位示例：\SI{9.81}{\metre\per\second\squared}。
+
+\section{定理类环境}
+
+\begin{definition}[测试定义]\label{def:test}
+设 $V$ 为线性空间。这是 Definition 环境。
+\end{definition}
+
+\begin{theorem}[测试定理]\label{thm:test}
+若 $a,b\in\mathbb{R}$，则 $(a+b)^2=a^2+2ab+b^2$。
+\end{theorem}
+
+\begin{proof}
+直接展开右端即可。
+\end{proof}
+
+\begin{proposition}[测试命题]
+这是 Proposition 环境，并与 Theorem 共用计数器。
+\end{proposition}
+
+\begin{lemma}[测试引理]
+这是 Lemma 环境。
+\end{lemma}
+
+\begin{corollary}[测试推论]
+这是 Corollary 环境。
+\end{corollary}
+
+\begin{example}[测试例子]
+由定理~\ref{thm:test}，取 $a=b=1$ 即得 $4=4$。
+\end{example}
+
+\begin{question}[测试问题]
+Definition~\ref{def:test} 的编号和 Theorem 是否独立？
+\end{question}
+
+\begin{solution}
+是。Definition 使用独立计数器。
+\end{solution}
+
+\begin{remark}[测试注记]
+Remark 使用普通的 definition theorem style，不带彩色边框。
+\end{remark}
+
+\begin{attention}
+这是 Attention 环境，用于提示需要特别注意的内容。
+\end{attention}
+
+\section{Quarto 兼容环境}
+
+\begin{itemize}
+  \tightlist
+  \item Quarto/Pandoc 紧凑列表测试；
+  \item 第二项。
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{print}\OperatorTok{(}\StringTok{"hello"}\OperatorTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\section{列表、表格与图片}
+
+\begin{table}[H]
+  \centering
+  \caption{表格环境测试}
+  \begin{tabular}{c c}
+    \toprule
+    参数 & 数值 \\
+    \midrule
+    $a$ & 1 \\
+    $b$ & 2 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\begin{figure}[H]
+  \centering
+  \rule{0.6\textwidth}{0.28\textwidth}
+  \caption{图片环境占位测试}
+\end{figure}
+
+\section{链接}
+
+内部引用：见定理~\ref{thm:test}。外部链接测试：\url{https://www.latex-project.org/}。

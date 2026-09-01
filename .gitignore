@@ -1,1 +1,31 @@
+# Quarto HTML 输出
+_site/
+
+# GitHub Actions 临时打包目录
+dist/
+
+# Quarto 自动生成的 LaTeX 正文和媒体
+tex/generated/
+
+# latex-preview.nvim / 临时 aux 目录（任意层级）
 aux/
+**/aux/
+latex-preview-cache/
+**/latex-preview-cache/
+
+# LaTeX 临时文件
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.xdv
+*.bbl
+*.blg
+
+# 本地编译 PDF
+tex/main.pdf
