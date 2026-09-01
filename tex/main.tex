@@ -1,5 +1,5 @@
 % !TeX program = xelatex
-\documentclass[UTF8,openany]{ctexbook}
+\documentclass[UTF8,openany,oneside]{ctexbook}
 
 % ---------- 页面与基础功能 ----------
 \usepackage[a4paper,centering,body={16cm,25cm}]{geometry}
@@ -147,24 +147,15 @@
 \begin{document}
 
 \input{cover}
-\clearpage
 
 \frontmatter
-\input{copyright}
-\clearpage
-\tableofcontents
-\clearpage
 
-% index.qmd（前言）仍处于 frontmatter；
-% index.qmd 末尾的 Raw LaTeX 会执行 \mainmatter，
-% 因此“常用软件”从 Chapter 1 开始编号。
 \IfFileExists{generated/book-latex/PT-Notes.tex}{%
   \subimport{generated/book-latex/}{PT-Notes.tex}%
 }{%
   \IfFileExists{generated/PT-Notes.tex}{%
     \subimport{generated/}{PT-Notes.tex}%
   }{%
-    \PackageWarningNoLine{PT-Notes}{Quarto-generated PT-Notes.tex not found; compiling Chapter/test.tex instead}%
     \mainmatter
     \include{Chapter/test}
   }%

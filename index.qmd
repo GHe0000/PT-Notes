@@ -12,9 +12,23 @@ toc: true
 网站托管在 GitHub，仓库链接：<https://github.com/GHe0000/PT-Notes> 欢迎各位 PR 和 Issue. 文章所有内容遵从 CC 4.0 BY-NC 共享.
 
 
+```markdown
+::: {.content-visible when-format="html"}
+
 上次提交时间： [![last-commit](https://img.shields.io/github/last-commit/GHe0000/PT-Notes?style=flat&logo=github&label=last-commit&labelColor=555&color=007ec6)](https://github.com/GHe0000/PT-Notes/commits)，网页编写总时长：[![wakatime](https://wakatime.com/badge/user/70908aa3-b2c6-4f44-a07f-7bd45f260e48/project/6486300c-7284-4e4d-8f62-d3d82f9df830.svg)](https://wakatime.com/badge/user/70908aa3-b2c6-4f44-a07f-7bd45f260e48/project/6486300c-7284-4e4d-8f62-d3d82f9df830)
+
+:::
+```
 
 
 ```{=latex}
+\par
+\vspace{1.5em}
+
+\noindent Copyright \copyright\ 2026--2026 Guotao He
+
+\clearpage
+\tableofcontents
+\clearpage
 \mainmatter
 ```
