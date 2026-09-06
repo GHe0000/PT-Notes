@@ -33,6 +33,7 @@ jobs:
       # 当前 Quarto 通常会在其中建立 book-latex/ 子目录；
       # main.tex 同时兼容直接输出到 generated/ 根目录的情况。
       - name: Render LaTeX body
+        id: render-latex
         shell: bash
         run: |
           set -euo pipefail
@@ -49,9 +50,32 @@ jobs:
             exit 1
           fi
 
-      # Artifact 中保留顶层 tex/ 目录。
-      - name: Prepare TeX source artifact
+      # 使用完整 TeX Live 编译中文书籍；latexmk 自动处理目录和交叉引用。
+      - name: Compile PDF
+        id: compile-pdf
+        uses: xu-cheng/latex-action@v4
+        with:
+          root_file: main.tex
+          working_directory: tex
+          latexmk_use_xelatex: true
+          latexmk_shell_escape: true
+          extra_system_packages: inkscape
+
+      - name: Prepare website PDF
         shell: bash
+        run: |
+          set -euo pipefail
+          test -s tex/main.pdf
+          mkdir -p _site/Download
+          cp tex/main.pdf _site/Download/Note.pdf
+
+      # Artifact 中保留顶层 tex/ 目录；编译失败也上传源码和日志。
+      - name: Prepare TeX source artifact
+        id: prepare-tex
+        if: ${{ !cancelled() && steps.render-latex.outcome == 'success' }}
+        shell: bash
+        env:
+          PDF_BUILD_OUTCOME: ${{ steps.compile-pdf.outcome }}
         run: |
           set -euo pipefail
           rm -rf dist/PT-Notes-tex-source
@@ -68,10 +92,25 @@ jobs:
                -o -name '*.synctex.gz' -o -name '*.xdv' -o -name 'main.pdf' \) \
             -delete
 
+          # 与网站使用同一次编译的 PDF；失败时不归档可能不完整的 PDF。
+          if [[ "$PDF_BUILD_OUTCOME" == "success" ]]; then
+            test -s tex/main.pdf
+            cp tex/main.pdf dist/PT-Notes-tex-source/Note.pdf
+          fi
+          if [[ -f tex/main.log ]]; then
+            mkdir -p dist/PT-Notes-tex-source/diagnostics
+            cp tex/main.log dist/PT-Notes-tex-source/diagnostics/main.log
+          fi
+          printf 'commit=%s\nrun=%s/%s/actions/runs/%s\npdf_build=%s\n' \
+            "$GITHUB_SHA" "$GITHUB_SERVER_URL" "$GITHUB_REPOSITORY" \
+            "$GITHUB_RUN_ID" "$PDF_BUILD_OUTCOME" \
+            > dist/PT-Notes-tex-source/build-info.txt
+
           echo '===== TeX artifact ====='
           find dist/PT-Notes-tex-source -maxdepth 5 -type f | sort
 
       - name: Upload TeX source artifact
+        if: ${{ !cancelled() && steps.prepare-tex.outcome == 'success' }}
         uses: actions/upload-artifact@v4
         with:
           name: PT-Notes-tex-source
