@@ -6,10 +6,11 @@ toc: true
 这是一个 PT 相关方法的介绍网站，记录在笔者一整年打 PT 过程中了解、记录、使用的一些实验方法以及一些经验和建议，供之后有志于参加 PT 比赛的同学参考. 不过笔者语言能力有限，所以可能有些地方表述不准确或者不清晰，同时比完国赛后比较摆烂，有些原本想提及的可能也懒得提了，所以可能有些内容可能不够完善或者不够全面，欢迎各位同学提出宝贵意见和建议，笔者会尽力改进和更新.
 
 
-另外这是我的个人主页，如果闲得无聊，可以看看我的其他博客和文章，以及一些课堂上敲的讲义和笔记. <https://ghe0000.pp.ua/>
+另外这是我的个人 Blog：<https://ghe0000.pp.ua/>，其中记载了我的一些或许无趣或许有趣的想法，以及敲的个人的笔记和讲义，如果闲得无聊，可以去看看.
 
 
-网站托管在 GitHub，仓库链接：<https://github.com/GHe0000/PT-Notes> 欢迎各位 PR 和 Issue. 文章所有内容遵从 CC 4.0 BY-NC 共享.
+网站托管在 GitHub，仓库链接：<https://github.com/GHe0000/PT-Notes> 通过 GitHub Actions 自动构建网页和 PDF 文档，网页链接：<https://pt.ghe0000.pp.ua/>，对应的 PDF：<https://pt.ghe0000.pp.ua/Download/Note.pdf>. 欢迎各位 PR 和 Issue. 文章所有内容遵从 CC 4.0 BY-NC 共享.
+
 
 ::: {.content-visible when-format="html"}
 
