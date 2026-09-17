@@ -62,7 +62,8 @@
 \renewcommand{\bottomfraction}{0.65}
 \renewcommand{\floatpagefraction}{0.60}
 \floatplacement{figure}{H}
-\setkeys{Gin}{width=0.6\textwidth}
+% 宽、高均以正文页面宽度为上限基准，并保持图片比例。
+\setkeys{Gin}{width=0.6\textwidth,height=0.6\textwidth,keepaspectratio}
 
 % ---------- 标题 ----------
 \ctexset{
