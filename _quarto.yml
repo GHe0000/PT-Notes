@@ -18,6 +18,7 @@ format:
     theme:
       light: cosmo
       dark: darkly
+    css: styles.css
 
   latex:
     # LaTeX 只生成正文；完整文档由 tex/main.tex 负责。
