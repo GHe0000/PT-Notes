@@ -28,7 +28,7 @@ AI 搜索相关论文和标准数据，材料购买时最好知道**牌号**，�
 
 另外，假设精度要求不是很高，也可以使用 Comsol 自带的材料库中的材料参数.
 
-### 相关网站
+## 相关网站
 
 - IYPT 官网：<https://iypt.org/>
 - IYPT 历年网站：<https://iypt.org/past-tournaments/>
