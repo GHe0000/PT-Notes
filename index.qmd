@@ -9,7 +9,12 @@ toc: true
 另外这是我的个人 Blog：<https://ghe0000.pp.ua/>，其中记载了我的一些或许无趣或许有趣的想法，以及敲的个人的笔记和讲义，如果闲得无聊，可以去看看.
 
 
-网站托管在 GitHub，仓库链接：<https://github.com/GHe0000/PT-Notes> 通过 GitHub Actions 自动构建网页和 PDF 文档，网页链接：<https://pt.ghe0000.pp.ua/>，对应的 PDF：<https://pt.ghe0000.pp.ua/Download/Note.pdf>. 欢迎各位 PR 和 Issue. 文章所有内容遵从 CC 4.0 BY-NC 共享.
+网站使用 Quarto Pages 搭建，托管在 GitHub，通过 GitHub Actions 自动构建网页和 PDF 文档. 欢迎各位 PR 和提 Issue. 文章所有内容遵从 CC 4.0 BY-NC 共享.
+
+
+- 仓库链接：<https://github.com/GHe0000/PT-Notes> 
+- 网页链接：<https://pt.ghe0000.pp.ua/>
+- PDF 下载链接：<https://pt.ghe0000.pp.ua/Download/Note.pdf>
 
 
 ::: {.content-visible when-format="html"}
