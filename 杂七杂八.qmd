@@ -30,6 +30,18 @@ AI 搜索相关论文和标准数据，材料购买时最好知道**牌号**，�
 
 ## 相关网站
 
+### 历年赛题和 Ref Kit
+
 - IYPT 官网：<https://iypt.org/>
 - IYPT 历年网站：<https://iypt.org/past-tournaments/>
 - IYPT Reference Kit：<https://kit.ilyam.org/>
+
+### 论文检索和下载
+
+- Google Scholar <学术搜索>：<https://scholar.google.com/>
+- ResearchGate <学术搜索>：<https://www.researchgate.net/search/publications>
+
+- arXiv.org <全球最大预印本网站>：<https://arxiv.org/>
+- Crossref Metadata Search <论文DOI查询>：<https://search.crossref.org/>
+- Sci-Hub <免费论文下载>：<https://sci-hub.st/>（网址不稳定）
+
