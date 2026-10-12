@@ -20,7 +20,7 @@ AI 时代最常用的工具软件一定是各类 AI 工具，因此这里介绍�
 
 - 官网 <https://claude.ai/>
 
-**Deepseek**：国内非常好用的模型，便宜大碗，之前搭配 OpenCode 作为 Agent，GPT 5.6 出来后作为 GPT 5.6 的 SubAgent 模型搭配使用. 近期 Deepseek V4 Pro + Deepseek Harness 非常惊艳，基本能达到 GPT 和 Claude 的顶尖水平（不过需要折腾，同时由于出的较晚，笔者打 PT 时没用过 DSv4 + DSH）. 假设其他模型使用上存在困难（不方便访问，价格过高等），完全可以使用 DS 系列模型进行替换.
+**Deepseek**：国内非常好用的模型，便宜大碗，之前搭配 OpenCode 作为 Agent，GPT 5.6 出来后作为 GPT 5.6 的 SubAgent 模型搭配使用. 近期 Deepseek V4 Pro + Deepseek Harness 非常惊艳，基本能达到 GPT 和 Claude 的顶尖水平（不过需要折腾，同时由于出的较晚，笔者打 PT 时没用过 DSv4 + DSH）. 假设其他模型使用上存在困难（不方便访问，价格过高等），完全可以使用 DS 系列模型进行替换. 不过很多功能需要通过插件等方式提供，也没有原生的 Deep Research 等功能，搜索资料没有其他的方便.
 
 - 官网：<https://www.deepseek.com/>
 
