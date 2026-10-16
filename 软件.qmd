@@ -103,6 +103,7 @@ AI 时代最常用的工具软件一定是各类 AI 工具，因此这里介绍�
 - 物理量符号斜体，单位正体
 
 - 官网：<https://www.originlab.com/>
+- 教育许可申请（申请免费使用，使用校园邮箱申请）：<https://www.originlab.com/OriginProLearning.aspx>
 
 **PowerPoint 图形**：在我们的 PPT 中经常需要各种示意图，比如受力分析，光路，实验装置示意图等，绘制这些示意图其实最后发现还是 PPT 的各种形状最方便，而且适合后面进行风格统一和修改调制. 需要善用 PPT 形状中的“组合”和“合并形状”中的“结合”，“组合”，“拆分”等功能
 
@@ -147,7 +148,7 @@ Arduino 使用 C++ 编程，可能比较容易被劝退（虽然有 AI 其实可
 **Fusion 360**：个人比较喜欢使用的一个 3D 建模软件，非常适合 PT 中实验装置、夹具、支架和 3D 打印零件设计. 当然这个市面上有很多类似的软件，比如 Autodesk、Solidworks 等，这里不做过多赘述.
 
 - 官网：<https://www.autodesk.com.cn/products/fusion-360/overview>
-- 教育许可申请（申请免费使用）：<https://www.autodesk.com.cn/education/students>
+- 教育许可申请（申请免费使用，使用校园邮箱申请）：<https://www.autodesk.com.cn/education/students>
 
 
 ## 杂七杂八
