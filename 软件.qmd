@@ -104,6 +104,7 @@ AI 时代最常用的工具软件一定是各类 AI 工具，因此这里介绍�
 
 - 官网：<https://www.originlab.com/>
 - 教育许可申请（申请免费使用，使用校园邮箱申请）：<https://www.originlab.com/OriginProLearning.aspx>
+- 教育许可指南：<https://www.originlab.com/index.aspx?pid=4450>
 
 **PowerPoint 图形**：在我们的 PPT 中经常需要各种示意图，比如受力分析，光路，实验装置示意图等，绘制这些示意图其实最后发现还是 PPT 的各种形状最方便，而且适合后面进行风格统一和修改调制. 需要善用 PPT 形状中的“组合”和“合并形状”中的“结合”，“组合”，“拆分”等功能
 
